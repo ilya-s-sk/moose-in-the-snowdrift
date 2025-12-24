@@ -1,0 +1,200 @@
+@font-face {
+  font-family: 'EBGaramond';
+  src: url('./assets/EBGaramond-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'GreatVibes';
+  src: url('./assets/GreatVibes-Regular.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main: #fff;
+  --shadow: 0 0 8px var(--main);
+}
+
+body {
+  display: flex;
+  background-color: #172122;
+  background-color: #070707;
+  color: #fff;
+  font-family: 'EBGaramond';
+  min-height: 100vh;
+  overscroll-behavior: contain;
+
+  &:has(dialog:open) {
+    overflow: hidden;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+
+.content {
+  padding: 0 24px;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  img {
+    max-width: 70%;
+
+    border-radius: 20px;
+    border: 4px solid #fff;
+    box-shadow: var(--shadow);
+  }
+}
+
+.title {
+  text-align: center;
+  font-family: 'GreatVibes';
+  font-size: 74px;
+  line-height: 90%;
+  text-shadow: var(--shadow);
+  margin-bottom: 26px;
+
+  span {
+    font-size: 58px;
+  }
+}
+
+.decor-block {
+  display: flex;
+
+  &:has(.top-image) {
+    justify-content: end;
+  }
+
+  &:has(.bottom-image) {
+    margin-top: auto;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.top-image {
+  position: relative;
+  top: -10px;
+  right: -32px;
+}
+
+.bottom-image {
+  position: relative;
+  left: -112px;
+  bottom: -10px;
+}
+
+.info {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  font-size: 36px;
+  line-height: 111%;
+  margin-bottom: 52px;
+  
+  div {
+    display: flex;
+    gap: 8px;
+  }
+  
+  dd {
+    text-shadow: var(--shadow);
+  }
+}
+
+.text {
+  position: relative;
+  font-size: 32px;
+  line-height: 135%;
+}
+
+.summary {
+  font-size: 41px;
+  margin-bottom: 20px;
+}
+
+.text-end {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+
+.decor-border {
+    &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: var(--shadow);
+  }
+}
+
+.dialog {
+  box-sizing: border-box;
+  inset: 0;
+  margin: auto;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 20px;
+  width: 90%;
+
+  p {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  &:open {
+    overscroll-behavior: contain;
+  }
+
+  &::backdrop {
+    background-color: #111;
+    opacity: 0.9;
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding-top: 20px;
+  
+  button {
+    padding: 5px 10px;
+    font-size: 28px;
+    font-family: inherit;
+    border: 2px solid #111;
+    border-radius: 15px;
+    background-color: transparent;
+
+    &[id="cancel-dialog"] {
+      border-color: #fff;
+      background-color: #111;
+      color: #fff;
+    }
+  }
+}

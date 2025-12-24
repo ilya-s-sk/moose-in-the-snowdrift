@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+  <main>
+    <div class="decor-block">
+      <img class="top-image" src="./src/assets/top.png" width="260" alt="">
+    </div>
+
+    <div class="content">
+      <h1 class="title">Отель<br><span>&laquo;Лось&nbsp;в&nbsp;сугробе&raquo;</span></h1>
+
+      <div class="hero-image">
+        <img src="./src/assets/avatars/and.jpg" alt="">
+      </div>
+
+      <div class="info decor-border">
+        <dl>
+          <div>
+            <dt>Имя:</dt>
+            <dd>Андрей</dd>
+          </div>
+          <div>
+            <dt>Возраст:</dt>
+            <dd>32</dd>
+          </div>
+        </dl>
+      </div>
+
+      <p class="text">
+        Учитывая ключевые сценарии поведения, базовый вектор развития способствует повышению качества поставленных
+        обществом задач. В своём стремлении повысить качество жизни, они забывают, что современная методология
+        разработки прекрасно подходит для реализации кластеризации усилий. Равным образом, повышение уровня гражданского
+        сознания однозначно определяет каждого участника как способного принимать собственные решения касаемо поэтапного
+        и последовательного развития общества.
+      </p>
+
+      <div class="text-end decor-border"></div>
+
+
+      <details id="act2-details" class="details">
+        <summary id="act2-summary" class="summary">Акт II</summary>
+        <p class="text">
+          Учитывая ключевые сценарии поведения, базовый вектор развития способствует повышению качества поставленных
+          обществом задач. В своём стремлении повысить качество жизни, они забывают, что современная методология
+          разработки прекрасно подходит для реализации кластеризации усилий. Равным образом, повышение уровня
+          гражданского
+          сознания однозначно определяет каждого участника как способного принимать собственные решения касаемо
+          поэтапного
+          и последовательного развития общества.
+        </p>
+      </details>
+    </div>
+
+
+    <div class="decor-block">
+      <img class="bottom-image" src="./src/assets/bottom.png" width="320" alt="">
+    </div>
+
+    <dialog id="warning-dialog" class="dialog">
+      <form method="dialog">
+        <p>Вы уверены, что пришло время открыть второй акт?</p>
+        <div class="controls">
+          <button type="submit" value="open" id="open-act">Уверен</button>
+          <button type="submit" value="cancel" id="cancel-dialog">Нет, ещё рано</button>
+        </div>
+      </form>
+    </dialog>
+  </main>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
