@@ -52,6 +52,10 @@ export const setupData = (data) => {
   const secondActEl = document.getElementById('secondAct');
 
   avatar.src = `./avatars/${image}.jpg`;
+  avatar.addEventListener('load', ({ target }) => {
+    target.style.opacity = '1';
+  }, { once: true })
+
   nameEl.textContent = name;
 
   const makeParagrapshList = (array) => array.map(text => {
