@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'EBGaramond';
-  src: url('./assets/EBGaramond-VariableFont_wght.ttf');
+  src: url('./assets/EBGaramond-VariableFont_wght.woff');
 }
 
 @font-face {
   font-family: 'GreatVibes';
-  src: url('./assets/GreatVibes-Regular.ttf');
+  src: url('./assets/GreatVibes-Regular.woff');
 }
 
 * {
@@ -39,6 +39,11 @@ main {
   overscroll-behavior: contain;
 }
 
+#personal-info {
+  opacity: 0;
+  transition: 1.5s ease opacity;
+}
+
 .content {
   padding: 0 24px;
 }
@@ -68,6 +73,10 @@ main {
   span {
     font-size: 58px;
   }
+}
+
+h2.title {
+  font-size: 58px;
 }
 
 .decor-block {
@@ -117,10 +126,24 @@ main {
   }
 }
 
+.story-content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
 .text {
   position: relative;
   font-size: 32px;
   line-height: 135%;
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &#verdict {
+    font-style: italic;
+  }
 }
 
 .summary {
@@ -197,4 +220,11 @@ main {
       color: #fff;
     }
   }
+}
+
+.link {
+  display: block;
+  margin-top: 32px;
+  color: #33f;
+  font-style: italic;
 }

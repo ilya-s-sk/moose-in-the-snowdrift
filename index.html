@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Детективная игра</title>
+  <link rel="icon" href="./src/assets/snowflake.png" type="image/x-icon">
+
   <link rel="stylesheet" href="./src/style.css">
 </head>
 
@@ -17,46 +19,50 @@
     <div class="content">
       <h1 class="title">Отель<br><span>&laquo;Лось&nbsp;в&nbsp;сугробе&raquo;</span></h1>
 
-      <div class="hero-image">
-        <img src="./src/assets/avatars/and.jpg" alt="">
-      </div>
+      <div id="personal-info">
+        <div class="hero-image">
+          <img id="avatar" src="" alt="">
+        </div>
 
-      <div class="info decor-border">
-        <dl>
+        <div class="info decor-border">
+          <dl>
+            <div>
+              <dt>Ваше имя —</dt>
+              <dd id="name"></dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="story-content">
           <div>
-            <dt>Имя:</dt>
-            <dd>Андрей</dd>
+            <h2 class="title">О Вас</h2>
+            <div id="introduction">
+            </div>
           </div>
+
           <div>
-            <dt>Возраст:</dt>
-            <dd>32</dd>
+            <h2 class="title">Приглашение</h2>
+
+            <div id="invitation">
+
+            </div>
           </div>
-        </dl>
+        </div>
+
+        <div class="text-end decor-border"></div>
+
+        <details id="act2-details" class="details">
+          <summary id="act2-summary" class="summary">Акт II</summary>
+
+          <div>
+            <p id="verdict" class="text"></p>
+
+            <div id="secondAct"></div>
+
+            <a class="text link" href="./src/assets//room.png" target="_blank">Открыть план места преступления</a>
+          </div>
+        </details>
       </div>
-
-      <p class="text">
-        Учитывая ключевые сценарии поведения, базовый вектор развития способствует повышению качества поставленных
-        обществом задач. В своём стремлении повысить качество жизни, они забывают, что современная методология
-        разработки прекрасно подходит для реализации кластеризации усилий. Равным образом, повышение уровня гражданского
-        сознания однозначно определяет каждого участника как способного принимать собственные решения касаемо поэтапного
-        и последовательного развития общества.
-      </p>
-
-      <div class="text-end decor-border"></div>
-
-
-      <details id="act2-details" class="details">
-        <summary id="act2-summary" class="summary">Акт II</summary>
-        <p class="text">
-          Учитывая ключевые сценарии поведения, базовый вектор развития способствует повышению качества поставленных
-          обществом задач. В своём стремлении повысить качество жизни, они забывают, что современная методология
-          разработки прекрасно подходит для реализации кластеризации усилий. Равным образом, повышение уровня
-          гражданского
-          сознания однозначно определяет каждого участника как способного принимать собственные решения касаемо
-          поэтапного
-          и последовательного развития общества.
-        </p>
-      </details>
     </div>
 
 
