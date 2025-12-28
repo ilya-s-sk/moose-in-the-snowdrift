@@ -51,7 +51,7 @@ export const setupData = (data) => {
   const verdictEl = document.getElementById('verdict');
   const secondActEl = document.getElementById('secondAct');
 
-  avatar.src = `./public/avatars/${image}.jpg`;
+  avatar.src = `/avatars/${image}.jpg`;
   nameEl.textContent = name;
 
   const makeParagrapshList = (array) => array.map(text => {
